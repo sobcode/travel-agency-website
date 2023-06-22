@@ -1,0 +1,428 @@
+@font-face {
+    font-family: 'Mulish Light';
+    src: url('../assets/fonts/Mulish/Mulish-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Mulish';
+    src: url('../assets/fonts/Mulish/Mulish-Black.ttf') format('truetype');
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish Light';
+}
+.header {
+    padding: 40px 104px 50px;  
+    height: 700px;  
+}
+.header__nav {
+    display: flex;
+    z-index: 10;
+}
+.header__nav__list {
+    width: 440px;
+    margin: 0 auto;
+    margin-left: 56px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list__item a {
+    text-decoration: none;
+    color: #000;
+}
+.header__nav__actions {
+    display: flex;
+    align-items: center;
+}
+.header__nav__actions {
+    position: relative;
+}
+.actions__search__input {
+    height: 20px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    outline: none;
+    cursor: pointer;
+    padding-right: 20px;
+    background: #919191;
+}
+.actions__search__btn {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 165px;
+    transition: .3s all;
+    background: #919191;
+}
+.actions__search__btn:hover {
+    transform: scale(1.1);
+}
+.actions__logout-btn {
+    margin-left: 24px;
+    width: 90px;
+    height: 40px;
+    background: #C7923E;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s all;
+}
+.actions__logout-btn:hover {
+    background-color: #a27731;
+}
+
+.header__sections {
+    position: relative;
+}
+.header__left {
+    width: 708px;
+}
+.header__left__heading {
+    width: 608px;
+    font-size: 42px;
+    font-family: 'Mulish';
+    margin-top: 184px;
+}
+.header__left__paragraph {
+    width: 608px;
+    margin-top: 24px;
+}
+.header__left__features {
+    display: flex;
+    padding: 24px 10px;  
+}
+.header__left__features li {
+    margin-right: 50px;
+    
+}
+
+
+
+.header__left__actions {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+}
+.header__left__booking-btn {
+    width: 159px;
+    height: 40px;
+    background: #C7923E;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s all;
+}
+.header__left__booking-btn:hover {
+    background-color: #a27731;
+}
+.header__left__price {
+    margin-left: 150px;
+}
+.header__left__price p {
+    font-size: 12px;
+}
+.header__left__price span {
+    font-family: 'Lora';
+    font-size: 27px;
+    font-weight: 700;
+}
+/* End Header left */
+
+/* Header right */
+.header__right {
+    height: 700px;
+    width: 624px;
+    background-color: #919191;
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index:-1;
+}
+/* End Header right */
+/* main 1 */
+.main-1 {
+    height: 598px;
+    padding-top: 50px;
+    display: flex;
+}
+.main-1__left {
+    height: 100%;
+    width: 624px;
+    background-color: #919191;
+}
+.main-1__right {
+    height: 100%;
+    width: 473px;
+    margin-left: 104px;
+    padding-top: 80px;
+}
+.main-1__right__heading {
+    margin-bottom: 24px;
+    font-size: 39px;
+    font-family: 'Mulish';
+}
+.main-1__right__paragraph {
+    margin-bottom: 64px;
+}
+/* End main 1 */
+/* main 2 */
+.main-2 {
+    height: 398px;
+    padding: 40px 104px 0;
+    display: flex;
+    flex-direction: column;
+}
+.main-2__headings {
+    font-family: 'Lora';
+    font-weight: 700;
+    font-size: 39px;
+}
+.main-2__list-places {
+    margin-top: 40px;
+    padding-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: start;
+    gap: 40px;
+
+}
+/* end of main 2 */
+/* main 3 */
+.main-3-photos {
+    height: 596px;
+    margin-left: 0;
+}
+.main-3__heading-wrapper {
+    display: flex;
+    margin-bottom: 24px;
+}
+.main-3__heading {
+    margin-left: 104px;
+    font-family: 'Lora';
+    font-size: 39px;
+    font-weight: 700;
+    width: fit-content;
+}
+.main-3__actions {
+    margin-left: 60%;
+    margin-right: 24px;
+    display: flex;
+}
+.main-3__tour-container {
+    padding: 35px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+}
+.main-3__tour-container::-webkit-scrollbar {
+    display: none;
+  }
+.tour-places-photos {
+    display: inline-block;
+    width: 300px;
+    height: 356px;
+    border: 1px solid #000;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #919191;
+}
+.scroll-btn {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .prev-btn {
+    background-color: #a27731;
+    color: #fff;
+    border: 2px solid #a27731;
+  }
+  
+  .next-btn {
+    background-color: #fff;
+    color: #a27731;
+    border: 2px solid #a27731;
+  }
+/* end main 3 */
+/* booking now */
+.booking-now {
+    padding-left: 104px;
+    padding-right: 104px;
+    padding-bottom: 40px;
+}
+.booking-now__heading {
+    font-family: 'Lora';
+    font-weight: 700;
+    font-size: 39px;
+    text-align: center;
+}
+.booking-now__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.booking-now__form {
+    width: 400px;
+    padding: 10px;
+}
+
+.booking-now__form div {
+    margin-bottom: 10px;
+}
+.booking-now__form label {
+    font-family: 'Lora';
+    font-weight: 900;
+    font-size: 9px;
+    text-transform: uppercase;
+
+}
+.booking-now__form input {
+    height: 30px;
+    padding-left: 5px;
+    outline: none;
+}
+.name-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+.name-inputs div {
+    display: flex;
+    flex-direction: column;
+}
+.email-input {
+    display: flex;
+    flex-direction: column;
+}
+.number-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-number-input {
+    display: flex;
+    flex-direction: column;
+}
+.card-detail-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+.card-detail-inputs div {
+    display: flex;
+    flex-direction: column;
+}
+.booking-now__form button {
+    width: 159px;
+    height: 40px;
+    margin: 20px 0;
+    background: #C7923E;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s all;
+}
+.booking-now__form button:hover {
+    background-color: #a27731;
+}
+
+/* end of booking now */
+/* footer */
+.footer {
+    height: 449px;
+    background-color: #27343F;
+    padding-left: 104px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__newsletter {
+    margin-top: 80px;
+    width: 520px;
+    color: #fff;
+}
+.footer__newsletter__heading {
+    font-family: 'Lora';
+    font-weight: 700;
+    font-size: 39px;
+}
+.footer__newsletter__paragraph {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    font-size: 16px;
+}
+.footer__newsletter__form input {
+    height: 56px;
+    width: 336px;
+    border-radius: 8px;
+    font-size: 22px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+}
+.footer__newsletter__form button {
+    height: 56px;
+    width: 56px;
+    border-radius: 8px;
+    background: #C7923E;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+.footer__newsletter__form button:hover {
+    background:  #ae8038;
+}
+.footer__newsletter__form button img {
+    transition: all .3s;
+}
+.footer__newsletter__form button img:hover {
+    transform: rotate(270deg);
+}
+
+.footer__links {
+    background-color: #1A242D;
+    width: 60%;
+    padding-left: 104px;
+    padding-top: 79px;
+}
+.footer__links__paragraph {
+    color: #fff;
+    margin-bottom: 80px;
+}
+.footer__links__lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links__list {
+    list-style: none;
+    margin-right: 50px;
+}
+.links__list li {
+    margin-bottom: 24px;
+}
+.links__list li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+.links__list li a:hover {
+    color: #cccccc;
+}
+/* end footer */
