@@ -1,6 +1,6 @@
 package com.application.travelagencyserver;
 
-import com.application.travelagencyserver.model.service.interfaces.UserService;
+import com.application.travelagencyserver.service.interfaces.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -37,7 +37,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:6.0.9" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.19" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:5.0.1" level="project" />
@@ -66,7 +65,7 @@
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.7" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:6.0.9" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.1.0" level="project" />
@@ -77,6 +76,13 @@
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.20.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:2.0.7" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.33" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:6.0.9" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:6.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:6.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:6.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:6.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.9" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.15.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.15.0" level="project" />
@@ -92,8 +98,8 @@
     <orderEntry type="library" name="Maven: io.micrometer:micrometer-observation:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: io.micrometer:micrometer-commons:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:6.0.9" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.9" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.mysql:mysql-connector-j:8.0.33" level="project" />
+    <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt-api:0.11.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:3.1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:3.1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.1.0" level="project" />
