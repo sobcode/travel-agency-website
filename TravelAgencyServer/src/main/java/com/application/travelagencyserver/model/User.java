@@ -42,7 +42,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + "***" + '\'' +
                 ", role=" + role +
                 ", status=" + status +
                 '}';
@@ -102,6 +102,6 @@ public class User {
     }
 
     public enum Status {
-        Blocked, Active
+        Blocked, Active, Deleted
     }
 }
