@@ -1,11 +1,14 @@
 package com.application.travelagencyserver.service.interfaces;
 
+import com.application.travelagencyserver.exception.WrongIdWhileCreateOrUpdateException;
 import com.application.travelagencyserver.model.Tour;
 
 import java.util.List;
 
 public interface TourService {
-    Tour saveTour(Tour tour);
+    Tour addTour(Tour tour) throws WrongIdWhileCreateOrUpdateException;
+
+    Tour updateTour(Tour tour) throws WrongIdWhileCreateOrUpdateException;
 
     void deleteTourById(int id);
 

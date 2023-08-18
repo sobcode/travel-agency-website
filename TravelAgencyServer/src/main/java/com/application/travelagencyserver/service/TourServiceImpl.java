@@ -1,5 +1,6 @@
 package com.application.travelagencyserver.service;
 
+import com.application.travelagencyserver.exception.WrongIdWhileCreateOrUpdateException;
 import com.application.travelagencyserver.repository.TourRepository;
 import com.application.travelagencyserver.model.Tour;
 import com.application.travelagencyserver.service.interfaces.TourService;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -20,12 +22,29 @@ public class TourServiceImpl implements TourService {
     }
 
     @Override
-    public Tour saveTour(Tour tour) {
+    public Tour addTour(Tour tour) throws WrongIdWhileCreateOrUpdateException{
+        if(tour.getId() != 0) {
+            throw new WrongIdWhileCreateOrUpdateException("Tour id must be 0 while creating!");
+        }
+
+        return tourRepository.save(tour);
+    }
+
+    @Override
+    public Tour updateTour(Tour tour) throws WrongIdWhileCreateOrUpdateException {
+        if(tour.getId() == 0) {
+            throw new WrongIdWhileCreateOrUpdateException("Tour id must be specified while updating!");
+        }
+
         return tourRepository.save(tour);
     }
 
     @Override
     public void deleteTourById(int id) {
+        if(findTourById(id) == null) {
+            throw new NoSuchElementException("There is no tour with id " + id + " in the database!");
+        }
+
         tourRepository.deleteById(id);
     }
 

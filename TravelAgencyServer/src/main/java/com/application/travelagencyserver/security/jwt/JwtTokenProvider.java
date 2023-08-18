@@ -71,11 +71,11 @@ public class JwtTokenProvider {
         return null;
     }
 
-    public boolean validateToken(String token){
+    public boolean validateToken(String token) {
         try{
             Claims claims = extractAllClaims(token);
 
-            if(claims.getExpiration().before(new Date(System.currentTimeMillis()))){
+            if(claims.getExpiration().getTime() < System.currentTimeMillis()){
                 return false;
             }
             return true;

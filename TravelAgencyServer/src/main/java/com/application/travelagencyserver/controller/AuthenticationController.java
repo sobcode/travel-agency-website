@@ -5,12 +5,10 @@ import com.application.travelagencyserver.dto.auth.LoginRequestDTO;
 import com.application.travelagencyserver.dto.auth.RegisterRequestDTO;
 import com.application.travelagencyserver.service.interfaces.AuthenticationService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/auth")
 public class AuthenticationController {
 

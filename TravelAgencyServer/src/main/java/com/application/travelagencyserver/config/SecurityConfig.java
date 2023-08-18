@@ -1,6 +1,7 @@
 package com.application.travelagencyserver.config;
 
-import com.application.travelagencyserver.security.jwt.JwtTokenFilter;
+import com.application.travelagencyserver.filter.FilterChainExceptionHandler;
+import com.application.travelagencyserver.filter.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,11 +19,14 @@ public class SecurityConfig {
 
     private final AuthenticationProvider authenticationProvider;
     private final JwtTokenFilter jwtTokenFilter;
+    private final FilterChainExceptionHandler filterChainExceptionHandler;
 
     @Autowired
-    public SecurityConfig(AuthenticationProvider authenticationProvider, JwtTokenFilter jwtTokenFilter) {
+    public SecurityConfig(AuthenticationProvider authenticationProvider, JwtTokenFilter jwtTokenFilter,
+                          FilterChainExceptionHandler filterChainExceptionHandler) {
         this.authenticationProvider = authenticationProvider;
         this.jwtTokenFilter = jwtTokenFilter;
+        this.filterChainExceptionHandler = filterChainExceptionHandler;
     }
 
     @Bean
@@ -41,6 +45,7 @@ public class SecurityConfig {
                         configurer
                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)
+                .addFilterBefore(filterChainExceptionHandler, UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

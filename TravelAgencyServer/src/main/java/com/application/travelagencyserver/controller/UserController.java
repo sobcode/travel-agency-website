@@ -1,15 +1,18 @@
 package com.application.travelagencyserver.controller;
 
+import com.application.travelagencyserver.dto.user.UpdateUserDTO;
+import com.application.travelagencyserver.exception.WrongIdWhileCreateOrUpdateException;
 import com.application.travelagencyserver.model.User;
 import com.application.travelagencyserver.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/users")
 public class UserController {
 
@@ -20,8 +23,35 @@ public class UserController {
         this.userService = userService;
     }
 
+    @GetMapping("/")
+    public ResponseEntity<List<User>> getAllUsers() {
+        return ResponseEntity.ok(userService.findAllUsers());
+    }
+
     @GetMapping("/{userId}")
-    public ResponseEntity<User> getUser(@PathVariable int userId){
+    public ResponseEntity<User> getUser(@PathVariable int userId) {
         return ResponseEntity.ok(userService.findUserById(userId));
     }
+
+//    @PostMapping("/")
+//    public ResponseEntity<User> addUser(@RequestBody User user) {
+//        user = userService.saveUser(user);
+//
+//        return ResponseEntity.ok(user);
+//    }
+
+    @PutMapping("/")
+    public ResponseEntity<User> updateUser(@RequestBody UpdateUserDTO updateUserDTO)
+            throws WrongIdWhileCreateOrUpdateException {
+        return ResponseEntity.ok(
+                userService.updateUser(updateUserDTO));
+    }
+
+    @DeleteMapping("/{userId}")
+    public ResponseEntity<User> deleteUser(@PathVariable int userId) {
+        userService.deleteUserById(userId);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }

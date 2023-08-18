@@ -98,7 +98,7 @@ public class User {
 
     //------------------------  ENUMs ------------------------
     public enum Role {
-        Admin, Manager, User, Guest
+        Admin, Manager, User
     }
 
     public enum Status {

@@ -1,8 +1,7 @@
 package com.application.travelagencyserver.service.interfaces;
 
-import com.application.travelagencyserver.dto.auth.AuthenticationResponseDTO;
-import com.application.travelagencyserver.dto.auth.LoginRequestDTO;
-import com.application.travelagencyserver.dto.auth.RegisterRequestDTO;
+import com.application.travelagencyserver.dto.user.UpdateUserDTO;
+import com.application.travelagencyserver.exception.WrongIdWhileCreateOrUpdateException;
 import com.application.travelagencyserver.model.User;
 
 import java.util.List;
@@ -17,4 +16,6 @@ public interface UserService {
     List<User> findAllUsers();
 
     User findUserById(int id);
+
+    User updateUser(UpdateUserDTO updateUserDTO) throws WrongIdWhileCreateOrUpdateException;
 }
